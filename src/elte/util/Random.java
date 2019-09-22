@@ -7,4 +7,8 @@ public class Random {
         int num = random.nextInt(101);
         return chance > num;
     }
+
+    public static int choice(int choices) {
+        return random.nextInt(choices) + 1;
+    }
 }
