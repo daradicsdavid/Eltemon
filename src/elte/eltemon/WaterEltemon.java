@@ -4,8 +4,8 @@ import elte.move.Move;
 import elte.move.WaterMove;
 
 public abstract class WaterEltemon extends Eltemon {
-    WaterEltemon(int hp, WaterMove[] moves) {
-        super(hp, moves);
+    WaterEltemon(int id, int hp, WaterMove[] moves) {
+        super(id, hp, moves);
     }
 
     @Override

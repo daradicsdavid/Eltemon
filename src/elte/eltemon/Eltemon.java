@@ -7,11 +7,13 @@ import elte.util.Random;
 import java.util.Objects;
 
 public abstract class Eltemon {
+    private final int id;
     protected int hp;
     protected int attackBonus = 0;
     private Move[] moves;
 
-    Eltemon(int hp, Move[] moves) {
+    Eltemon(int id, int hp, Move[] moves) {
+        this.id = id;
         this.hp = hp;
         this.moves = moves;
     }
@@ -29,7 +31,7 @@ public abstract class Eltemon {
 
     protected abstract int calculateDamage(Move move);
 
-    private void decreaseHp(int damage) {
+    protected final void decreaseHp(int damage) {
         hp = hp - damage;
         ConsoleLogger.log(this + " has " + hp + " hp left!");
     }
@@ -38,5 +40,24 @@ public abstract class Eltemon {
     private Move getMove() {
         int choice = Random.choice(moves.length) - 1;
         return moves[choice];
+    }
+
+
+    @Override
+    public String toString() {
+        return getClass().getName() + id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Eltemon)) return false;
+        Eltemon eltemon = (Eltemon) o;
+        return id == eltemon.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }

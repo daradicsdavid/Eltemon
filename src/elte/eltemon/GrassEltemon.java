@@ -2,13 +2,13 @@ package elte.eltemon;
 
 import elte.move.GrassMove;
 import elte.move.Move;
+import elte.util.ConsoleLogger;
 
 public abstract class GrassEltemon extends Eltemon {
 
     GrassEltemon(int id, int hp, GrassMove[] moves) {
-        super(hp, moves);
+        super(id, hp, moves);
     }
-
 
     @Override
     protected int calculateDamage(Move move) {

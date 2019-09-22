@@ -2,13 +2,13 @@ package elte.eltemon;
 
 import elte.move.FireMove;
 import elte.move.Move;
+import elte.util.ConsoleLogger;
 
 public abstract class FireEltemon extends Eltemon {
 
-    FireEltemon(int hp, FireMove[] moves) {
-        super(hp, moves);
+    FireEltemon(int id, int hp, FireMove[] moves) {
+        super(id, hp, moves);
     }
-
 
     @Override
     protected int calculateDamage(Move move) {
