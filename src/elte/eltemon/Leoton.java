@@ -16,16 +16,22 @@ public class Leoton extends FireEltemon {
      *
      * @param id the id
      */
+
+    /**
+     * EXERCISE: Call the parent class's constructor and pass the ID, hp and moves provided by the moves() function.
+     */
     public Leoton(int id) {
-        super(id, BASE_HP, moves());
+
     }
 
     /**
      * The moves function is static, meaning that it belongs to the whole class and can be called without an actual class object.
      */
+
+    /**
+     * EXERCISE: Add two moves, with a name and a damage to an array and return the array.
+     */
     private static FireMove[] moves() {
-        return new FireMove[]{
-                new FireMove(4, "Ember"),
-                new FireMove(6, "Fire Spin")};
+
     }
 }

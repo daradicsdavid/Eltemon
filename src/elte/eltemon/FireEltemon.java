@@ -24,11 +24,12 @@ public abstract class FireEltemon extends Eltemon {
     /**
      * Implementation of Trainable interface. It increases the hp and attackBonus by 1
      */
+
+    /**
+     * EXERCISE: Increase the hp and attackBonus by 1.
+     */
     @Override
     public void train() {
-        hp = hp + 1;
-        attackBonus = attackBonus + 1;
-        ConsoleLogger.log(this + " is training! Increased hp and attackBonus!");
     }
 
 
@@ -42,15 +43,13 @@ public abstract class FireEltemon extends Eltemon {
      * @param move
      * @return damage
      */
+
+    /**
+     * EXERCISE: Code the function based on the comment above. The parameter has a type and damage field.
+     * Tip: Use a switch.
+     */
     @Override
     protected int calculateDamage(Move move) {
-        switch (move.getType()) {
-            case WATER:
-                return move.getDamage() * 2;
-            case GRASS:
-                return (int) ((double) move.getDamage() / 2);
-            default:
-                return move.getDamage();
-        }
+
     }
 }

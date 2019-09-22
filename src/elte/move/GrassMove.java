@@ -12,7 +12,10 @@ public class GrassMove extends Move {
      * @param damage the damage
      * @param name   the name
      */
+    /**
+     * EXERCISE: Call the parent class's constructor and pass the damage, and name parameters, and the MoveType GRASS parameter.
+     */
     public GrassMove(int damage, String name) {
-        super(damage, MoveType.GRASS, name);
+
     }
 }

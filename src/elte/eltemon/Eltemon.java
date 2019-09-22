@@ -42,8 +42,11 @@ public abstract class Eltemon implements Trainable {
      *
      * @return the boolean
      */
+
+    /**
+     * EXERCISE: Code the missing function
+     */
     public boolean hasHp() {
-        return hp > 0;
     }
 
     /**
@@ -83,9 +86,11 @@ public abstract class Eltemon implements Trainable {
      *
      * @param damage the damage
      */
+
+    /**
+     * EXERCISE: Code the missing function, decrease the hp field by the passed damage parameter.
+     */
     protected final void decreaseHp(int damage) {
-        hp = hp - damage;
-        ConsoleLogger.log(this + " has " + hp + " hp left!");
     }
 
 
@@ -94,9 +99,12 @@ public abstract class Eltemon implements Trainable {
      *
      * @return Move
      */
+
+    /**
+     * EXERCISE: Code the missing function, return a random move from the moves array.
+     * Tip: The Random class has a choice function which generate a number between 1 and the passed number.
+     */
     private Move getMove() {
-        int choice = Random.choice(moves.length) - 1;
-        return moves[choice];
     }
 
 

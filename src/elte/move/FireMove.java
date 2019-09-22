@@ -12,7 +12,10 @@ public class FireMove extends Move {
      * @param damage the damage
      * @param name   the name
      */
-    public FireMove(int damage, String name) {
-        super(damage, MoveType.FIRE, name);
+    /**
+     * EXERCISE: Call the parent class's constructor and pass the damage, and name parameters, and the MoveType FIRE parameter.
+     */
+    public FireMove(int damage, String name){
+
     }
 }

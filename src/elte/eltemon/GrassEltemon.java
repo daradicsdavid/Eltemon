@@ -39,15 +39,12 @@ public abstract class GrassEltemon extends Eltemon {
      * @param move
      * @return damage
      */
+
+    /**
+     * EXERCISE: Code the function based on the comment above. The parameter has a type and damage field.
+     * Tip: Use a switch.
+     */
     @Override
     protected int calculateDamage(Move move) {
-        switch (move.getType()) {
-            case FIRE:
-                return move.getDamage() * 2;
-            case WATER:
-                return (int) ((double) move.getDamage() / 2);
-            default:
-                return move.getDamage();
-        }
     }
 }
