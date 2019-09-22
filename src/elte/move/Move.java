@@ -16,9 +16,7 @@ public abstract class Move {
      * @param name   the name
      */
     Move(int damage, MoveType type, String name) {
-        this.damage = damage;
-        this.type = type;
-        this.name = name;
+        //EXERCISE
     }
 
     /**
@@ -27,7 +25,7 @@ public abstract class Move {
      * @return the type
      */
     public MoveType getType() {
-        return type;
+        //EXERCISE
     }
 
     /**
@@ -36,7 +34,7 @@ public abstract class Move {
      * @return the damage
      */
     public int getDamage() {
-        return damage;
+        //EXERCISE
     }
 
     /**

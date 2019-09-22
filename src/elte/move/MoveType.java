@@ -25,8 +25,7 @@ public enum MoveType {
     private final String name;
 
     MoveType(String name) {
-
-        this.name = name;
+        //EXERCISE
     }
 
     @Override

@@ -12,6 +12,6 @@ public class WaterMove extends Move {
      * @param name   the name
      */
     public WaterMove(int damage, String name) {
-        super(damage, MoveType.WATER, name);
+        //EXERCISE
     }
 }

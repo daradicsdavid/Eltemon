@@ -15,7 +15,7 @@ public abstract class WaterEltemon extends Eltemon {
      * @param moves the moves
      */
     WaterEltemon(int id, int hp, WaterMove[] moves) {
-        super(id, hp, moves);
+        //EXERCISE
     }
 
     /**
@@ -30,13 +30,6 @@ public abstract class WaterEltemon extends Eltemon {
      */
     @Override
     protected int calculateDamage(Move move) {
-        switch (move.getType()) {
-            case GRASS:
-                return move.getDamage() * 2;
-            case FIRE:
-                return (int) ((double) move.getDamage() / 2);
-            default:
-                return move.getDamage();
-        }
+        //EXERCISE
     }
 }

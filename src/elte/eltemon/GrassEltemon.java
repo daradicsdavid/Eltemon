@@ -17,7 +17,7 @@ public abstract class GrassEltemon extends Eltemon {
      * @param moves the moves
      */
     GrassEltemon(int id, int hp, GrassMove[] moves) {
-        super(id, hp, moves);
+        //EXERCISE
     }
 
     /**
@@ -25,8 +25,7 @@ public abstract class GrassEltemon extends Eltemon {
      */
     @Override
     public void train() {
-        attackBonus = attackBonus + 2;
-        ConsoleLogger.log(this + " is training! Increased attackBonus!");
+        //EXERCISE
     }
 
     /**
@@ -41,13 +40,6 @@ public abstract class GrassEltemon extends Eltemon {
      */
     @Override
     protected int calculateDamage(Move move) {
-        switch (move.getType()) {
-            case FIRE:
-                return move.getDamage() * 2;
-            case WATER:
-                return (int) ((double) move.getDamage() / 2);
-            default:
-                return move.getDamage();
-        }
+        //EXERCISE
     }
 }

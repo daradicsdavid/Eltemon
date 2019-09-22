@@ -13,6 +13,6 @@ public class FireMove extends Move {
      * @param name   the name
      */
     public FireMove(int damage, String name) {
-        super(damage, MoveType.FIRE, name);
+        //EXERCISE
     }
 }

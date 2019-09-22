@@ -17,7 +17,7 @@ public abstract class FireEltemon extends Eltemon {
      * @param moves the moves
      */
     FireEltemon(int id, int hp, FireMove[] moves) {
-        super(id, hp, moves);
+        //EXERCISE
     }
 
 
@@ -26,9 +26,7 @@ public abstract class FireEltemon extends Eltemon {
      */
     @Override
     public void train() {
-        hp = hp + 1;
-        attackBonus = attackBonus + 1;
-        ConsoleLogger.log(this + " is training! Increased hp and attackBonus!");
+        //EXERCISE
     }
 
 
@@ -44,13 +42,6 @@ public abstract class FireEltemon extends Eltemon {
      */
     @Override
     protected int calculateDamage(Move move) {
-        switch (move.getType()) {
-            case WATER:
-                return move.getDamage() * 2;
-            case GRASS:
-                return (int) ((double) move.getDamage() / 2);
-            default:
-                return move.getDamage();
-        }
+        //EXERCISE
     }
 }

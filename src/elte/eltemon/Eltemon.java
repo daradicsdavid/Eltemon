@@ -32,9 +32,7 @@ public abstract class Eltemon implements Trainable {
      * @param moves the moves
      */
     Eltemon(int id, int hp, Move[] moves) {
-        this.id = id;
-        this.hp = hp;
-        this.moves = moves;
+        //EXERCISE
     }
 
     /**
@@ -43,7 +41,7 @@ public abstract class Eltemon implements Trainable {
      * @return the boolean
      */
     public boolean hasHp() {
-        return hp > 0;
+        //EXERCISE
     }
 
     /**
@@ -55,10 +53,7 @@ public abstract class Eltemon implements Trainable {
      * @param defender
      */
     public void attack(Eltemon defender) {
-        Move move = getMove();
-        ConsoleLogger.log(this + " attacks " + defender + " with " + move);
-        int damage = defender.calculateDamage(move);
-        defender.decreaseHp(damage + attackBonus);
+        //EXERCISE
     }
 
     /**
@@ -84,8 +79,7 @@ public abstract class Eltemon implements Trainable {
      * @param damage the damage
      */
     protected final void decreaseHp(int damage) {
-        hp = hp - damage;
-        ConsoleLogger.log(this + " has " + hp + " hp left!");
+        //EXERCISE
     }
 
 
@@ -95,8 +89,7 @@ public abstract class Eltemon implements Trainable {
      * @return Move
      */
     private Move getMove() {
-        int choice = Random.choice(moves.length) - 1;
-        return moves[choice];
+        //EXERCISE
     }
 
 
@@ -108,7 +101,7 @@ public abstract class Eltemon implements Trainable {
      */
     @Override
     public String toString() {
-        return getClass().getName() + id;
+        //EXERCISE
     }
 
     /**
@@ -121,10 +114,7 @@ public abstract class Eltemon implements Trainable {
      */
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Eltemon)) return false;
-        Eltemon eltemon = (Eltemon) o;
-        return id == eltemon.id;
+        //EXERCISE
     }
 
     /**

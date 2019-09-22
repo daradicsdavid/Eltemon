@@ -10,7 +10,6 @@ import elte.util.Random;
  * The type Laboratory. Creates Eltemons.
  */
 public class Laboratory {
-    private static int id = 0;
 
     /**
      * Create eltemon. First increases the id variable.
@@ -21,15 +20,6 @@ public class Laboratory {
      * @return the eltemon
      */
     public Eltemon create() {
-        id++;
-        int randomType = Random.choice(3);
-        switch (randomType) {
-            case 1:
-                return new Crazepie(id);
-            case 2:
-                return new Leoton(id);
-            default:
-                return new Specybara(id);
-        }
+        //EXERCISE
     }
 }

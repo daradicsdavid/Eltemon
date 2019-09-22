@@ -13,6 +13,6 @@ public class GrassMove extends Move {
      * @param name   the name
      */
     public GrassMove(int damage, String name) {
-        super(damage, MoveType.GRASS, name);
+        //EXERCISE
     }
 }
