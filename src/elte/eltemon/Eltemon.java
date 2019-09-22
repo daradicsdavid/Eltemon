@@ -6,7 +6,7 @@ import elte.util.Random;
 
 import java.util.Objects;
 
-public abstract class Eltemon {
+public abstract class Eltemon implements Trainable {
     private final int id;
     protected int hp;
     protected int attackBonus = 0;

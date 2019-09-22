@@ -11,6 +11,14 @@ public abstract class FireEltemon extends Eltemon {
     }
 
     @Override
+    public void train() {
+        hp = hp + 1;
+        attackBonus = attackBonus + 1;
+        ConsoleLogger.log(this + " is training! Increased hp and attackBonus!");
+    }
+
+
+    @Override
     protected int calculateDamage(Move move) {
         switch (move.getType()) {
             case WATER:
