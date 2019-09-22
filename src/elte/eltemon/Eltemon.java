@@ -4,8 +4,11 @@ import elte.move.Move;
 import elte.util.ConsoleLogger;
 import elte.util.Random;
 
+import java.util.Objects;
+
 public abstract class Eltemon {
-    private int hp;
+    protected int hp;
+    protected int attackBonus = 0;
     private Move[] moves;
 
     Eltemon(int hp, Move[] moves) {
@@ -21,21 +24,19 @@ public abstract class Eltemon {
         Move move = getMove();
         ConsoleLogger.log(this + " attacks " + defender + " with " + move);
         int damage = defender.calculateDamage(move);
-        defender.decreaseHp(damage);
+        defender.decreaseHp(damage + attackBonus);
     }
 
-    private int calculateDamage(Move move) {
-        return move.getDamage();
-    }
+    protected abstract int calculateDamage(Move move);
 
     private void decreaseHp(int damage) {
         hp = hp - damage;
         ConsoleLogger.log(this + " has " + hp + " hp left!");
     }
 
+
     private Move getMove() {
         int choice = Random.choice(moves.length) - 1;
         return moves[choice];
     }
-
 }

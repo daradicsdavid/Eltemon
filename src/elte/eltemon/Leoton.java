@@ -1,8 +1,8 @@
 package elte.eltemon;
 
-import elte.move.Move;
+import elte.move.FireMove;
 
-public class Leoton extends Eltemon {
+public class Leoton extends FireEltemon {
 
     private static final int BASE_HP = 28;
 
@@ -10,7 +10,9 @@ public class Leoton extends Eltemon {
         super(BASE_HP, moves());
     }
 
-    private static Move[] moves() {
-        return new Move[]{new Move(5)};
+    private static FireMove[] moves() {
+        return new FireMove[]{
+                new FireMove(4, "Ember"),
+                new FireMove(6, "Fire Spin")};
     }
 }

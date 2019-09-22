@@ -1,16 +1,17 @@
 package elte.eltemon;
 
-import elte.move.Move;
+import elte.move.WaterMove;
 
-public class Crazepie extends Eltemon {
+public class Crazepie extends WaterEltemon {
     private static final int BASE_HP = 23;
 
     public Crazepie() {
         super(BASE_HP, moves());
     }
 
-    private static Move[] moves() {
-        return new Move[]{new Move(7)};
+    private static WaterMove[] moves() {
+        return new WaterMove[]{
+                new WaterMove(6, "Whirlpool"),
+                new WaterMove(8, "Hydro Pump")};
     }
-
 }
