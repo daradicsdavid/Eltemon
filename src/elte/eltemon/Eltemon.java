@@ -127,12 +127,12 @@ public abstract class Eltemon implements Trainable {
      *
      * @return Whether the two objects are the same
      */
+
+    /**
+     * EXERCISE: Implement the equals method based on the comments.
+     */
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Eltemon)) return false;
-        Eltemon eltemon = (Eltemon) o;
-        return id == eltemon.id;
     }
 
     /**

@@ -27,22 +27,12 @@ public class Arena {
      * They attack each other until one of them has less then 1 hp.
      * Then the arena writes the winner to console.
      */
-    public void battle() {
-
-        do {
-            attacker.attack(defender);
-            switchRoles();
-        } while (attacker.hasHp() && defender.hasHp());
-
-        ConsoleLogger.log("The winner is:" + defender);
-    }
 
     /*
-     * Switch the attacker and defender references, with the help a temporary variable.
+    EXERCISE: Run a battle until one of the Eltemon has 0 hp. Then declare a winner.
+    Don't forget to switch the eltemon's roles, the attacker will defend, the defender will attack after each turn.
      */
-    private void switchRoles() {
-        Eltemon temp = attacker;
-        attacker = defender;
-        defender = temp;
+    public void battle() {
+
     }
 }

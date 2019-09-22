@@ -24,9 +24,11 @@ public class TrainingField {
      * Run training.
      * A foreach (for without index) loop calls the train function of every Trainable.
      */
+
+    /*
+    EXERCISE: Run the training on every Trainable
+     */
     public void runTraining() {
-        for (Trainable eltemon : eltemons) {
-            eltemon.train();
-        }
+
     }
 }

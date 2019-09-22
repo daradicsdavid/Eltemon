@@ -6,7 +6,6 @@ import elte.move.GrassMove;
  * The type Specybara.
  */
 public class Specybara extends GrassEltemon {
-    private static final int BASE_HP = 25;
 
     /**
      * Instantiates a new Specybara.
@@ -15,16 +14,22 @@ public class Specybara extends GrassEltemon {
      *
      * @param id the id
      */
+
+    /**
+     * EXERCISE: Call the parent class's constructor and pass the ID, hp and moves provided by the moves() function.
+     */
     public Specybara(int id) {
-        super(id, BASE_HP, moves());
     }
+
 
     /**
      * The moves function is static, meaning that it belongs to the whole class and can be called without an actual class object.
      */
+
+    /**
+     * EXERCISE: Add two moves, with a name and a damage to an array and return the array.
+     */
     private static GrassMove[] moves() {
-        return new GrassMove[]{
-                new GrassMove(5, "Leaf Blade"),
-                new GrassMove(7, "Bullet Seed")};
+
     }
 }

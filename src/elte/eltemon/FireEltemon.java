@@ -2,7 +2,6 @@ package elte.eltemon;
 
 import elte.move.FireMove;
 import elte.move.Move;
-import elte.util.ConsoleLogger;
 
 /**
  * The type Fire eltemon. Subclass of Eltemon.
@@ -25,12 +24,9 @@ public abstract class FireEltemon extends Eltemon {
      * Implementation of Trainable interface. It increases the hp and attackBonus by 1
      */
 
-    /**
-     * EXERCISE: Increase the hp and attackBonus by 1.
+    /*
+     * EXERCISE: Implement train method based on comment.
      */
-    @Override
-    public void train() {
-    }
 
 
     /**

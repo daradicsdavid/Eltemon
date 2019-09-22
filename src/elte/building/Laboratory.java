@@ -20,16 +20,11 @@ public class Laboratory {
      *
      * @return the eltemon
      */
+
+    /*
+    EXERCISE: Based on a random number, create one Eltemon of a type. Don't forget to increase id before passing it to the new Eltemon.
+    * */
     public Eltemon create() {
-        id++;
-        int randomType = Random.choice(3);
-        switch (randomType) {
-            case 1:
-                return new Crazepie(id);
-            case 2:
-                return new Leoton(id);
-            default:
-                return new Specybara(id);
-        }
+
     }
 }

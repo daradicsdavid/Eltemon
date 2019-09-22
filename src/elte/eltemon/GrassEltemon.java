@@ -23,11 +23,10 @@ public abstract class GrassEltemon extends Eltemon {
     /**
      * Implementation of Trainable interface. It increases the attackBonus by 2
      */
-    @Override
-    public void train() {
-        attackBonus = attackBonus + 2;
-        ConsoleLogger.log(this + " is training! Increased attackBonus!");
-    }
+    /*
+     * EXERCISE: Implement train method based on comment.
+     */
+
 
     /**
      * The defender uses this function to calculate the actual damage by the passed move parameter.

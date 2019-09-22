@@ -7,8 +7,6 @@ import elte.move.FireMove;
  */
 public class Leoton extends FireEltemon {
 
-    private static final int BASE_HP = 28;
-
     /**
      * Instantiates a new Leoton.
      * The id comes from the Laboratory class.

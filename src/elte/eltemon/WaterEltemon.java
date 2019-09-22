@@ -28,15 +28,12 @@ public abstract class WaterEltemon extends Eltemon {
      * @param move
      * @return damage
      */
+
+    /**
+     * EXERCISE: Code the function based on the comment above. The parameter has a type and damage field.
+     * Tip: Use a switch.
+     */
     @Override
     protected int calculateDamage(Move move) {
-        switch (move.getType()) {
-            case GRASS:
-                return move.getDamage() * 2;
-            case FIRE:
-                return (int) ((double) move.getDamage() / 2);
-            default:
-                return move.getDamage();
-        }
     }
 }
