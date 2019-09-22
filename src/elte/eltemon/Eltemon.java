@@ -4,13 +4,14 @@ import elte.move.Move;
 import elte.util.ConsoleLogger;
 import elte.util.Random;
 
-public abstract class Eltemon {
+public abstract class Eltemon implements Trainable {
     private final int id;
-    private int hp;
-    private Move moves[];
+    protected int hp;
+    protected int attackBonus = 0;
+    private Move[] moves;
     private int movesSize;
 
-    public Eltemon(int id, int hp, Move[] moves) {
+    Eltemon(int id, int hp, Move[] moves) {
         this.id = id;
         this.hp = hp;
         this.moves = moves;
@@ -25,7 +26,7 @@ public abstract class Eltemon {
         Move move = getMove();
         ConsoleLogger.log(this + " attacks " + defender + " with " + move);
         int damage = defender.calculateDamage(move);
-        defender.decreaseHp(damage);
+        defender.decreaseHp(damage + attackBonus);
     }
 
     protected abstract int calculateDamage(Move move);

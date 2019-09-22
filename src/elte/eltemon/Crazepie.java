@@ -5,7 +5,6 @@ import elte.move.WaterMove;
 
 public class Crazepie extends WaterEltemon {
     private static final int BASE_HP = 23;
-    private Move[] moves;
 
     public Crazepie(int id) {
         super(id, BASE_HP, moves());

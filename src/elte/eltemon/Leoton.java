@@ -6,7 +6,6 @@ import elte.move.Move;
 public class Leoton extends FireEltemon {
 
     private static final int BASE_HP = 28;
-    private Move[] moves;
 
     public Leoton(int id) {
         super(id, BASE_HP, moves());

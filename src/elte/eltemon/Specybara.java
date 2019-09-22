@@ -5,7 +5,6 @@ import elte.move.Move;
 
 public class Specybara extends GrassEltemon {
     private static final int BASE_HP = 25;
-    private Move[] moves;
 
     public Specybara(int id) {
         super(id, BASE_HP, moves());

@@ -1,11 +1,18 @@
 package elte.eltemon;
 
 import elte.move.Move;
+import elte.util.ConsoleLogger;
 
 public abstract class GrassEltemon extends Eltemon {
 
-    public GrassEltemon(int id, int hp, Move[] moves) {
+    GrassEltemon(int id, int hp, Move[] moves) {
         super(id, hp, moves);
+    }
+
+    @Override
+    public void train() {
+        attackBonus = attackBonus + 2;
+        ConsoleLogger.log(this + " is training! Increased attackBonus!");
     }
 
     @Override

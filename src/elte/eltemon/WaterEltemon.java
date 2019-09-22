@@ -3,7 +3,7 @@ package elte.eltemon;
 import elte.move.Move;
 
 public abstract class WaterEltemon extends Eltemon {
-    public WaterEltemon(int id, int hp, Move[] moves) {
+    WaterEltemon(int id, int hp, Move[] moves) {
         super(id, hp, moves);
     }
 

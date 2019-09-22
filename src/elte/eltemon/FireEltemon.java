@@ -1,11 +1,19 @@
 package elte.eltemon;
 
 import elte.move.Move;
+import elte.util.ConsoleLogger;
 
 public abstract class FireEltemon extends Eltemon {
 
-    public FireEltemon(int id, int hp, Move[] moves) {
+    FireEltemon(int id, int hp, Move[] moves) {
         super(id, hp, moves);
+    }
+
+    @Override
+    public void train() {
+        hp = hp + 1;
+        attackBonus = attackBonus + 1;
+        ConsoleLogger.log(this + " is training! Increased hp and attackBonus!");
     }
 
     @Override
