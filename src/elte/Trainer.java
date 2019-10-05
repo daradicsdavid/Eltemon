@@ -11,19 +11,19 @@ import java.util.List;
 public class Trainer {
     private final static int NUMBER_OF_ELTEMONS = 3;
     private final String name;
-    private final List<Eltemon> eltemons;
+    private final Eltemon[] eltemons;
 
     Trainer(String name, Laboratory laboratory) {
         this.name = name;
-        this.eltemons = new ArrayList<>();
+        this.eltemons = new Eltemon[NUMBER_OF_ELTEMONS];
         for (int i = 0; i < NUMBER_OF_ELTEMONS; i++) {
-            this.eltemons.add(laboratory.create());
+            this.eltemons[i] = laboratory.create();
         }
     }
 
-    Trainer(String name, List<Eltemon> eltemons) {
+    Trainer(String name, Eltemon[] eltemons) {
         this.name = name;
-        if (eltemons.size() > NUMBER_OF_ELTEMONS) {
+        if (eltemons.length > NUMBER_OF_ELTEMONS) {
             throw new TooManyEltemonsError();
         }
         this.eltemons = eltemons;

@@ -2,6 +2,7 @@ package elte;
 
 import elte.building.Arena;
 import elte.building.Laboratory;
+import elte.eltemon.Eltemon;
 
 import java.util.Arrays;
 
@@ -22,9 +23,7 @@ public class Main {
         Laboratory laboratory = new Laboratory();
 
         Trainer trainer1 = new Trainer("GenericTrainerName1", laboratory);
-        Trainer trainer2 = new Trainer("GenericTrainerName2", Arrays.asList(
-                laboratory.create(), laboratory.create(), laboratory.create()
-        ));
+        Trainer trainer2 = new Trainer("GenericTrainerName2", new Eltemon[]{laboratory.create(), laboratory.create(), laboratory.create()});
 
         Arena arena = new Arena(trainer1, trainer2);
 
