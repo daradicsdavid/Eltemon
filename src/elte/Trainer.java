@@ -5,15 +5,12 @@ import elte.eltemon.Eltemon;
 import elte.exceptions.NoEltemonsLeftError;
 import elte.exceptions.TooManyEltemonsError;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Trainer {
-    private final static int NUMBER_OF_ELTEMONS = 3;
+    public static final int NUMBER_OF_ELTEMONS = 3;
     private final String name;
     private final Eltemon[] eltemons;
 
-    Trainer(String name, Laboratory laboratory) {
+    public Trainer(String name, Laboratory laboratory) {
         this.name = name;
         this.eltemons = new Eltemon[NUMBER_OF_ELTEMONS];
         for (int i = 0; i < NUMBER_OF_ELTEMONS; i++) {
@@ -21,7 +18,7 @@ public class Trainer {
         }
     }
 
-    Trainer(String name, Eltemon[] eltemons) {
+    public Trainer(String name, Eltemon[] eltemons) {
         this.name = name;
         if (eltemons.length > NUMBER_OF_ELTEMONS) {
             throw new TooManyEltemonsError();

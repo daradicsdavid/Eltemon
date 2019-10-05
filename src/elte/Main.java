@@ -3,6 +3,8 @@ package elte;
 import elte.building.Arena;
 import elte.building.Laboratory;
 import elte.eltemon.Eltemon;
+import elte.io.ApplicationState;
+import elte.io.Database;
 
 import java.util.Arrays;
 
@@ -20,7 +22,10 @@ public class Main {
      * @param args the input arguments
      */
     public static void main(String[] args) {
-        Laboratory laboratory = new Laboratory();
+        ApplicationState applicationState = Database.readFromDatabase();
+        System.out.println(applicationState);
+       /*
+        Laboratory laboratory = new Laboratory(0);
 
         Trainer trainer1 = new Trainer("GenericTrainerName1", laboratory);
         Trainer trainer2 = new Trainer("GenericTrainerName2", new Eltemon[]{laboratory.create(), laboratory.create(), laboratory.create()});
@@ -28,5 +33,7 @@ public class Main {
         Arena arena = new Arena(trainer1, trainer2);
 
         arena.battle();
+    */
     }
+
 }

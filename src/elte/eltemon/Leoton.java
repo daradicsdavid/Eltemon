@@ -28,4 +28,9 @@ public class Leoton extends FireEltemon {
                 new FireMove(4, "Ember"),
                 new FireMove(6, "Fire Spin")};
     }
+
+    @Override
+    public int getCode() {
+        return EltemonCode.LEOTON.code;
+    }
 }

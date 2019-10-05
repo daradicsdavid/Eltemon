@@ -27,4 +27,9 @@ public class Crazepie extends WaterEltemon {
                 new WaterMove(6, "Whirlpool"),
                 new WaterMove(8, "Hydro Pump")};
     }
+
+    @Override
+    public int getCode() {
+        return EltemonCode.CRAZEPIE.code;
+    }
 }

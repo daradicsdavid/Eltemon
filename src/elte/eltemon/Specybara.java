@@ -27,4 +27,10 @@ public class Specybara extends GrassEltemon {
                 new GrassMove(5, "Leaf Blade"),
                 new GrassMove(7, "Bullet Seed")};
     }
+
+
+    @Override
+    public int getCode() {
+        return EltemonCode.SPECYBARA.code;
+    }
 }

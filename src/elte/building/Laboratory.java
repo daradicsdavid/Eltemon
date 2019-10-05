@@ -10,7 +10,11 @@ import elte.util.Random;
  * The type Laboratory. Creates Eltemons.
  */
 public class Laboratory {
-    private static int id = 0;
+    private int id;
+
+    public Laboratory(int id) {
+        this.id = id;
+    }
 
     /**
      * Create eltemon. First increases the id variable.

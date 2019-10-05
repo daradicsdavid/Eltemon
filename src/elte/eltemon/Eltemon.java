@@ -127,4 +127,6 @@ public abstract class Eltemon implements Trainable {
     public int hashCode() {
         return Objects.hash(id);
     }
+
+    public abstract int getCode();
 }
