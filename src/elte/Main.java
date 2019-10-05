@@ -24,16 +24,10 @@ public class Main {
     public static void main(String[] args) {
         ApplicationState applicationState = Database.readFromDatabase();
         System.out.println(applicationState);
-       /*
-        Laboratory laboratory = new Laboratory(0);
 
-        Trainer trainer1 = new Trainer("GenericTrainerName1", laboratory);
-        Trainer trainer2 = new Trainer("GenericTrainerName2", new Eltemon[]{laboratory.create(), laboratory.create(), laboratory.create()});
-
-        Arena arena = new Arena(trainer1, trainer2);
+        Arena arena = new Arena(applicationState.trainers[0], applicationState.trainers[1]);
 
         arena.battle();
-    */
     }
 
 }

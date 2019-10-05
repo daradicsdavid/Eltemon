@@ -1,13 +1,12 @@
 package elte.io;
 
 import elte.Trainer;
-import elte.building.Laboratory;
 
 public class ApplicationState {
 
     private int eltemonIdBase;
 
-    private final Trainer[] trainers;
+    public final Trainer[] trainers;
 
 
     ApplicationState(Trainer[] trainers) {
