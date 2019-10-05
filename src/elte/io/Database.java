@@ -13,7 +13,7 @@ import java.util.List;
 public class Database {
 
     private static final String FILE_PATH = "resources/db";
-    private static final String DELIMITER = ",";
+    private static final String DELIMITER = " ";
 
     public static ApplicationState readFromDatabase() {
         try (BufferedReader br = new BufferedReader(new FileReader(FILE_PATH))) {
