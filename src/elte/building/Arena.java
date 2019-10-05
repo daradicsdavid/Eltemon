@@ -1,25 +1,22 @@
 package elte.building;
 
+import elte.Trainer;
 import elte.eltemon.Eltemon;
 import elte.util.ConsoleLogger;
 
 
 /**
- * The type Arena. Used to manage battles between two Eltemon.
+ * The type Arena. Used to manage battles between two trainers.
  */
 public class Arena {
+    private final Trainer trainer1;
+    private final Trainer trainer2;
     private Eltemon attacker;
     private Eltemon defender;
 
-    /**
-     * Instantiates a new Arena.
-     *
-     * @param eltemon1 the eltemon 1
-     * @param eltemon2 the eltemon 2
-     */
-    public Arena(Eltemon eltemon1, Eltemon eltemon2) {
-        attacker = eltemon1;
-        defender = eltemon2;
+    public Arena(Trainer trainer1, Trainer trainer2) {
+        this.trainer1 = trainer1;
+        this.trainer2 = trainer2;
     }
 
     /**
@@ -28,13 +25,22 @@ public class Arena {
      * Then the arena writes the winner to console.
      */
     public void battle() {
-
         do {
-            attacker.attack(defender);
-            switchRoles();
-        } while (attacker.hasHp() && defender.hasHp());
+            attacker = trainer1.getBattleReadyEltemon();
+            defender = trainer2.getBattleReadyEltemon();
+            do {
+                attacker.attack(defender);
+                switchRoles();
+            } while (attacker.hasHp());
+            ConsoleLogger.log("The winner is:" + defender);
+        } while (trainer1.hasBattleReadyEltemon() && trainer2.hasBattleReadyEltemon());
 
-        ConsoleLogger.log("The winner is:" + defender);
+        if (trainer1.hasBattleReadyEltemon()) {
+            ConsoleLogger.log("The winning trainer is:" + trainer1);
+        } else {
+            ConsoleLogger.log("The winning trainer is:" + trainer2);
+        }
+
     }
 
     /*

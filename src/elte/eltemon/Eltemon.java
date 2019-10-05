@@ -24,13 +24,7 @@ public abstract class Eltemon implements Trainable {
      */
     private Move[] moves;
 
-    /**
-     * Instantiates a new Eltemon.
-     *
-     * @param id    the id
-     * @param hp    the hp
-     * @param moves the moves
-     */
+
     Eltemon(int id, int hp, Move[] moves) {
         this.id = id;
         this.hp = hp;
@@ -78,13 +72,9 @@ public abstract class Eltemon implements Trainable {
      */
     protected abstract int calculateDamage(Move move);
 
-    /**
-     * Decrease hp. The logic is the same for every class.
-     *
-     * @param damage the damage
-     */
-    protected final void decreaseHp(int damage) {
-        hp = hp - damage;
+
+    private void decreaseHp(int damage) {
+        hp = damage < hp ? hp - damage : 0;
         ConsoleLogger.log(this + " has " + hp + " hp left!");
     }
 
@@ -108,7 +98,7 @@ public abstract class Eltemon implements Trainable {
      */
     @Override
     public String toString() {
-        return getClass().getName() + id;
+        return getClass().getName() + id + " (" + hp + ")";
     }
 
     /**

@@ -2,8 +2,8 @@ package elte;
 
 import elte.building.Arena;
 import elte.building.Laboratory;
-import elte.building.TrainingField;
-import elte.eltemon.Eltemon;
+
+import java.util.Arrays;
 
 /**
  * The type Main.
@@ -21,14 +21,12 @@ public class Main {
     public static void main(String[] args) {
         Laboratory laboratory = new Laboratory();
 
-        Eltemon eltemon1 = laboratory.create();
-        Eltemon eltemon2 = laboratory.create();
+        Trainer trainer1 = new Trainer("GenericTrainerName1", laboratory);
+        Trainer trainer2 = new Trainer("GenericTrainerName2", Arrays.asList(
+                laboratory.create(), laboratory.create(), laboratory.create()
+        ));
 
-        TrainingField field = new TrainingField(eltemon1, eltemon2);
-
-        field.runTraining();
-
-        Arena arena = new Arena(eltemon1, eltemon2);
+        Arena arena = new Arena(trainer1, trainer2);
 
         arena.battle();
     }
