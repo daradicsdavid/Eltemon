@@ -2,6 +2,7 @@ package elte.io;
 
 import elte.Trainer;
 import elte.eltemon.*;
+import elte.exceptions.TooManyEltemonsException;
 import elte.util.ConsoleLogger;
 
 import java.io.*;
@@ -31,8 +32,12 @@ public class Database {
         String name;
         List<Trainer> trainers = new ArrayList<>();
         while ((name = br.readLine()) != null) {
-            Eltemon[] eltemons = readTrainerEltemons(br);
-            trainers.add(new Trainer(name, eltemons));
+            try {
+                Eltemon[] eltemons = readTrainerEltemons(br);
+                trainers.add(new Trainer(name, eltemons));
+            } catch (TooManyEltemonsException e) {
+                ConsoleLogger.log("Skipping trainer:" + name);
+            }
         }
         return trainers.toArray(new Trainer[0]);
     }

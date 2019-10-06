@@ -3,7 +3,7 @@ package elte;
 import elte.building.Laboratory;
 import elte.eltemon.Eltemon;
 import elte.exceptions.NoEltemonsLeftError;
-import elte.exceptions.TooManyEltemonsError;
+import elte.exceptions.TooManyEltemonsException;
 
 public class Trainer {
     public static final int NUMBER_OF_ELTEMONS = 3;
@@ -18,10 +18,10 @@ public class Trainer {
         }
     }
 
-    public Trainer(String name, Eltemon[] eltemons) {
+    public Trainer(String name, Eltemon[] eltemons) throws TooManyEltemonsException {
         this.name = name;
         if (eltemons.length > NUMBER_OF_ELTEMONS) {
-            throw new TooManyEltemonsError();
+            throw new TooManyEltemonsException();
         }
         this.eltemons = eltemons;
     }
