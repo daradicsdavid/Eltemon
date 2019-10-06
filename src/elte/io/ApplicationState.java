@@ -7,7 +7,7 @@ public class ApplicationState {
 
     private int eltemonIdBase;
 
-    private final Trainer[] trainers;
+    public final Trainer[] trainers;
 
 
     ApplicationState(Trainer[] trainers) {
