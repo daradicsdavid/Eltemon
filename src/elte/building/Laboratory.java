@@ -36,4 +36,8 @@ public class Laboratory {
                 return new Specybara(id);
         }
     }
+
+    public int getId() {
+        return id;
+    }
 }

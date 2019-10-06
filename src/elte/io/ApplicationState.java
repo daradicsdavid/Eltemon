@@ -5,16 +5,16 @@ import elte.building.Laboratory;
 
 public class ApplicationState {
 
-    private int eltemonIdBase;
+    public final int eltemonIdBase;
 
     public final Trainer[] trainers;
 
 
-    ApplicationState(Trainer[] trainers) {
-        this(0, trainers);
+    ApplicationState() {
+        this(0, new Trainer[0]);
     }
 
-    ApplicationState(int eltemonIdBase, Trainer[] trainers) {
+    public ApplicationState(int eltemonIdBase, Trainer[] trainers) {
         this.eltemonIdBase = eltemonIdBase;
         this.trainers = trainers;
     }

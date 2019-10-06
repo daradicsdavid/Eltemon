@@ -7,8 +7,8 @@ import elte.exceptions.TooManyEltemonsError;
 
 public class Trainer {
     public static final int NUMBER_OF_ELTEMONS = 3;
-    private final String name;
-    private final Eltemon[] eltemons;
+    public final String name;
+    public final Eltemon[] eltemons;
 
     public Trainer(String name, Laboratory laboratory) {
         this.name = name;

@@ -2,18 +2,16 @@ package elte.io;
 
 import elte.Trainer;
 import elte.eltemon.*;
-import elte.exceptions.DatabaseError;
+import elte.util.ConsoleLogger;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Database {
 
     private static final String FILE_PATH = "resources/db";
-    private static final String DELIMITER = ",";
+    private static final String DELIMITER = " ";
 
     public static ApplicationState readFromDatabase() {
         try (BufferedReader br = new BufferedReader(new FileReader(FILE_PATH))) {
@@ -24,7 +22,8 @@ public class Database {
 
             return new ApplicationState(eltemonIdBase, trainers);
         } catch (IOException e) {
-            throw new DatabaseError(e);
+            ConsoleLogger.log(e.getMessage());
+            return new ApplicationState();
         }
     }
 
@@ -67,5 +66,27 @@ public class Database {
 
     private static Integer readEltemonIdBase(BufferedReader br) throws IOException {
         return Integer.valueOf(br.readLine());
+    }
+
+    public static void writeToDatabase(ApplicationState applicationState) {
+        try (PrintWriter pw = new PrintWriter(new FileWriter(FILE_PATH))) {
+            pw.println(applicationState.eltemonIdBase);
+            writeTrainers(pw, applicationState.trainers);
+        } catch (IOException e) {
+            ConsoleLogger.log(e.getMessage());
+        }
+    }
+
+    private static void writeTrainers(PrintWriter pw, Trainer[] trainers) {
+        for (Trainer trainer : trainers) {
+            pw.println(trainer.name);
+            writeEltemons(pw, trainer.eltemons);
+        }
+    }
+
+    private static void writeEltemons(PrintWriter pw, Eltemon[] eltemons) {
+        for (Eltemon eltemon : eltemons) {
+            pw.format("%d %d %n", eltemon.id, eltemon.getCode());
+        }
     }
 }

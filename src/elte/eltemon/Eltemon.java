@@ -10,7 +10,7 @@ import java.util.Objects;
  * The type Eltemon.This is the base class. Abstract means that we cannot make an object based on it.
  */
 public abstract class Eltemon implements Trainable {
-    private final int id;
+    public final int id;
     /**
      * The health points of the eltemon.
      */
